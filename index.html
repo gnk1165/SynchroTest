@@ -27,7 +27,8 @@ function Synch() {
   const fs = require('fs')
   
   const d = new Date();
-  fs.writeFile('Output.txt', d, (err) => {
+  
+  fs.writeFile('Synchro.txt', d, (err) => {
       
     // In case of a error throw err.
     if (err) throw err;
