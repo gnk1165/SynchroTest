@@ -23,21 +23,18 @@
 <button id="Synch" onclick="Synch()">Start in 1 Minute</button> 
 
 <script>
-function Synch() {
-  const fs = require('fs')
-  
-  const d = new Date();
-  
-  fs.writeFile('Synchro.txt', d, (err) => {
-      
-    // In case of a error throw err.
-    if (err) throw err;
-})
-}
+  function Synch() {
+    const fs = require('fs')
+    var sw : StreamWriter = new StreamWriter("Synchro.txt");
+    sw.WriteLine(d);
+    sw.Flush();
+    sw.Close();
+    print ("Done");
+  }
 
-function Clear(){
+  function Clear(){
 
-}
+  }
 </script> 
 
 </body>
